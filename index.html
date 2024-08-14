@@ -10,14 +10,18 @@
     <h1 class="site-title">Ultimate Trivial Pursuit</h1>
     <div class="container">
         <div class="button-container">
-            <button onclick="getRandomArticle()">Next</button>
-            <button onclick="revealTitle()">Reveal</button>
+            <input id="page_url" value="hello" readonly></input>
+            <button id="next_button" onclick="getRandomArticle()">Random</button>
+            <button id="reveal_conceal_button" class="toggle_button_on" onclick="toggleTitle()">Reveal</button>
+            <button id="share_button" onclick="sharePage()">Copy Link</button>
+            <div id="popup" class="popup">Copied!</div>
         </div>
         <div id="hidden_title">_</div>
         <div id="original_title" style="display:none"></div>
         <div id="hidden_content">_</div>
         <div id="original_content" style="display:none"></div>
     </div>
+    <div class="source-link"><a href="https://github.com/adamryman/ultimate-trivial-pursuit">See the source code on Github</a></div>
     <script src="trivial.js"></script>
 </body>
 </html>

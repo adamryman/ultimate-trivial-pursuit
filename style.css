@@ -41,6 +41,28 @@ button:hover {
     background-color: #285a8e;
 }
 
+#page_url {
+    width: 100%;
+    /*box-sizing: border-box; [> Ensures padding and borders are included in the width <]*/
+}
+
+.toggle_button_on {
+    background-color: #3366cc;
+
+}
+.toggle_button_on:hover {
+    background-color: #285a8e;
+}
+
+.toggle_button_off {
+    background-color: #cc3333;
+
+}
+.toggle_button_off:hover {
+    background-color: #b22e2e;
+}
+
+
 #hidden_content, #original_content {
     margin-top: 20px;
     line-height: 1.6;
@@ -82,4 +104,33 @@ h2 {
         max-width: 200px; /* Optionally set a maximum width */
         box-sizing: border-box; /* Include padding and border in the width */
     }
+    .popup.show {
+        margin: 0px 4px 10px 4px;
+        text-align: center; /* Center text inside buttons */
+        display: block;
+        width: 100%;
+    }
+}
+
+.source-link {
+    margin: 20px 4px 10px 4px;
+    text-align: center;
+}
+
+.popup {
+    margin: 20px 4px 10px 4px;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    display: none;
+    opacity: 0;
+    transition: opacity .1s;
+}
+
+.popup.show {
+    display: inline;
+    opacity: 1;
 }
