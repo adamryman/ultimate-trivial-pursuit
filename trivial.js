@@ -1,3 +1,9 @@
+function revealTitle() {
+  $("#hidden_title").hide()
+  $("#hidden_content").hide()
+  $("#original_title").show()
+  $("#original_content").show()
+}
 
 function handleArticleId(data){
   console.log("test");
@@ -35,17 +41,28 @@ function displayData(data , id){
   var title = container["title"];
   var body = container["extract"];
 
+  $("#original_title").hide()
+  $("#original_content").hide()
+  $("#original_title").html(title);
+  $("#original_content").html(body);
+
   var filtered_title = ''
   var words = title.split(' ')
+
   words.forEach(function(word) {
     replacement = '_'.repeat(word.length)
+    // remove ',' '(' and ')' from word before regexing it away
+    word = word.replace(/[,()]/g, '');
     var pattern = new RegExp(word, 'gi');
+
     body = body.replace(pattern, replacement);
     filtered_title = filtered_title + ' ' + replacement
   })
 
-  $("#title").html(filtered_title);
-  $("#content").html(body);
+  $("#hidden_title").html(filtered_title);
+  $("#hidden_content").html(body);
+  $("#hidden_title").show()
+  $("#hidden_content").show()
 }
 
 getRandomArticle();
