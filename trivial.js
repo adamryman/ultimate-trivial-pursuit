@@ -20,7 +20,7 @@ function getArticleByID(id){
 
 function getRandomArticle() {
   $.ajax({
-    url: "http://en.wikipedia.org/w/api.php?action=query&list=random&format=json&rnnamespace=0",
+    url: "https://en.wikipedia.org/w/api.php?action=query&list=random&format=json&rnnamespace=0",
     dataType: "jsonp",
     success: handleArticleId
   });
