@@ -35,11 +35,16 @@ function displayData(data , id){
   var title = container["title"];
   var body = container["extract"];
 
-  var filler = '_______';
-  var pattern = new RegExp(title, 'gi');
-  body = body.replace(pattern, filler);
+  var filtered_title = ''
+  var words = title.split(' ')
+  words.forEach(function(word) {
+    replacement = '_'.repeat(word.length)
+    var pattern = new RegExp(word, 'gi');
+    body = body.replace(pattern, replacement);
+    filtered_title = filtered_title + ' ' + replacement
+  })
 
-  $("#title").html(filler);
+  $("#title").html(filtered_title);
   $("#content").html(body);
 }
 
