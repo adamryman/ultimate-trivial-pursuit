@@ -1,0 +1,67 @@
+body {
+    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.site-title {
+    font-size: 36px; /* Larger font size for the site title */
+    font-family: Arial, sans-serif;
+    color: #202122;
+    margin-top: 20px; /* Add some space above the title */
+    margin-bottom: 20px; /* Space between the title and the container */
+    text-align: center; /* Center text including the site title */
+}
+
+.button-container {
+    margin-bottom: 20px; /* Space between the buttons and the container */
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    margin: 20px 4px 10px 4px;
+    padding: 10px 20px;
+    background-color: #3366cc;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #285a8e;
+}
+
+#hidden_content, #original_content {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #202122;
+}
+
+p, h1, h2, h3, h4, h5, h6, code {
+    color: #202122;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
