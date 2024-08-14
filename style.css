@@ -67,7 +67,7 @@ h2 {
 }
 
 /* Responsive adjustments */
-@media (orientation: portrait), (max-width: 600px) {
+@media (orientation: portrait), (max-width: 1080) {
     .button-container {
         display: flex; /* Use flexbox to manage button layout */
         justify-content: center; /* Center the buttons horizontally */
