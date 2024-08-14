@@ -65,4 +65,6 @@ function displayData(data , id){
   $("#hidden_content").show()
 }
 
-getRandomArticle();
+$(document).ready(function() {
+    getRandomArticle();
+});

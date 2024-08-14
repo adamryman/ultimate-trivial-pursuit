@@ -15,7 +15,7 @@ body {
 }
 
 .button-container {
-    margin-bottom: 20px; /* Space between the buttons and the container */
+    margin-bottom: 20px;
 }
 
 .container {
@@ -64,4 +64,22 @@ h1 {
 h2 {
     font-size: 24px;
     margin-bottom: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .button-container {
+        display: flex; /* Use flexbox to manage button layout */
+        justify-content: center; /* Center the buttons horizontally */
+        flex-wrap: wrap; /* Allow buttons to wrap if needed */
+    }
+    button {
+        font-size: 14px; /* Slightly reduce font size on smaller screens */
+        padding: 20px 20px;
+        min-width: 120px; /* Ensure buttons don't get too narrow */
+        text-align: center; /* Center text inside buttons */
+        flex: 1; /* Allow buttons to grow and shrink with screen size */
+        max-width: 200px; /* Optionally set a maximum width */
+        box-sizing: border-box; /* Include padding and border in the width */
+    }
 }
